@@ -24,6 +24,13 @@
                     <li class="tab active"><a href="#signup">Sign Up</a></li>
                     <li class="tab"><a href="login.php">Log In</a></li>
                 </ul>
+                  <?php 
+        if(isset($_GET['type'])){
+          if($_GET['type'] == "login_error"){
+            echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Already Exist!Go To Login</p>';
+         }
+       } 
+       ?>
                 <div id="signup">
                    <form method="post">
                        <div class="field-wrap">
@@ -33,7 +40,7 @@
                        <div class="field-wrap">
                            <div class="input-group">
                                <span class="input-group-addon">+91</span>
-                               <input type="number" class="form-control" name="Mobile Number" placeholder="Mobile Number" required>
+                               <input type="number" class="form-control" name="mobile_number" placeholder="Mobile Number" required>
                                <br>
                            </div>
                        </div>

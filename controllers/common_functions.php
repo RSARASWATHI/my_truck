@@ -7,7 +7,7 @@
 		mysqli_set_charset($conn, 'utf8mb4'); 
 		if(execute_query($sql, $conn)){
 			echo "SMS Sent";
-			header('location:../view/ ');
+			header('location:../view/validation.php ');
 		}else{
 			echo "not sent";
 		}

@@ -27,12 +27,19 @@
                     <li class="tab active"><a href="#login">login</a></li>
                     <li class="tab"><a href="index.php">Sign up</a></li>
                 </ul>
+                 <?php 
+        if(isset($_GET['type'])){
+          if($_GET['type'] == "login_error"){
+            echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Account is unavaliable. Signup your Account</p>';
+         }
+       } 
+       ?>
                 <div id="login">
                     <form action="/" method="post">
                         <div class="field-wrap">
                             <div class="input-group">
                                 <span class="input-group-addon">+91</span>
-                                <input type="number" class="form-control" name="Mobile Number" placeholder="Mobile Number" required>
+                                <input type="number" class="form-control" name="MobileNumber" placeholder="Mobile Number" required>
                                 <br>
                             </div>
                         </div>
