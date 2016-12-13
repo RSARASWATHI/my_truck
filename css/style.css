@@ -201,3 +201,16 @@ color:#ffffff;
 .form-control{
   border-radius:5px;
 }
+.navbar-fixed-left {
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+.text-center{
+  margin-top: 200px;
+}
+
+
+
+
