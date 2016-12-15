@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<?php session_start();?>
-=======
 <?php 
 session_start();
 ?>
->>>>>>> b93f34f95caa397bdede4654c196dbe155b67a0e
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,11 +35,7 @@ session_start();
             echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Enter Valid Code</p>';
          }
        } 
-<<<<<<< HEAD
-       ?><?php print_r($_SESSION['$key']);?>
-=======
        ?> <?php print_r($_SESSION['$key']);?>
->>>>>>> b93f34f95caa397bdede4654c196dbe155b67a0e
     	<input type="text" name="otp" placeholder="enter the otp" class="form-control" required>
     	</div>
     	<input type="submit" name="submit" value="continue" class="button button-block" formaction="../controllers/verification_controllers.php">
