@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
+    <script type="text/javascript" src="../js/sign_up.js"></script>
+=======
+>>>>>>> b93f34f95caa397bdede4654c196dbe155b67a0e
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -36,7 +40,6 @@
           if($_GET['type'] == "login_error"){
             echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Already Exist!Go To Login</p>';
          }
-
        } 
        ?>
                 <div id="signup">
@@ -48,7 +51,7 @@
                        <div class="field-wrap">
                            <div class="input-group">
                                <span class="input-group-addon">+91</span>
-                               <input type="text" class="form-control" name="mobile_number" placeholder="Mobile Number" maxlength="10" required>
+                               <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required autofocus>
                                <br>
                            </div>
                        </div>
