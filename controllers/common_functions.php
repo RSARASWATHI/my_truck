@@ -27,13 +27,16 @@
 			return $connection;
 		}
 
-	function get_user_id(){
+	function get_user_id($phonenumber){
+		$con=db_connect();
 		$condition=" `phonenumber` = '".$phone_number."'";
 		$selected_row = select('id', 'users',$condition, $con);
 		return $selected_row;
 	}
-	function get_user_name(){
+	function get_user_name($phonenumber){
+		$con=db_connect();
 		$condition=" `phonenumber` = '".$phone_number."'";
 		$selected_row = select('name', 'users',$condition, $con);
 		return $selected_row;
+	
 	}
