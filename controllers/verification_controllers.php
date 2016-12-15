@@ -1,11 +1,15 @@
 <?php
  session_start();
- if($_POST['validate_box'] == $_SESSION['$key']){
+ if($_POST['otp'] == $_SESSION['$key']){
  	// echo "success";
- header('location:../view/home.php ');
+ unset($_SESSION);
+ header('location:../view/ ');
  }
  else{
- 	echo "enter validate code to continue";
+		header('Location: ../validation.php?type=login_error');
+ 
  }
 
 ?>
+ 
+ 

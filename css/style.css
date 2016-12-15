@@ -112,7 +112,7 @@ label.highlight {
 input, textarea {
   /*font-size: 22px;*/
   display: block;
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 5px 10px;
   background: none;
@@ -123,6 +123,7 @@ input, textarea {
   /*-webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;*/
 }
+
 input:focus, textarea:focus {
   outline: 0;
   border-color: #1ab188;
@@ -187,7 +188,7 @@ textarea {
  }
  img {
     width: 98px;
-    height: 97px;
+    height: 100px;
     margin-left: 21px;
 }
 .container{
@@ -201,16 +202,47 @@ color:#ffffff;
 .form-control{
   border-radius:5px;
 }
-.navbar-fixed-left {
+/*.navbar-fixed-left {
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}*/
+.text-center{
+  margin-top: 200px;
+}
+/*.navbar-fixed-left {
   width: 140px;
   position: fixed;
   border-radius: 0;
   height: 100%;
 }
-.text-center{
-  margin-top: 200px;
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
 }
 
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
 
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
+.sidebar-wrapper{
+  height: 100%;
+}
+.nav navbar-nav navbar-right
+{
+  position: center;}
 
+.blue{
+  color: red;
 
+}
+.important{
+  color:lightgrey;
+}

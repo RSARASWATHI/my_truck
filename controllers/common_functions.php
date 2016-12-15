@@ -1,16 +1,16 @@
 <?php
 	include_once'../model/db.php';
 	function send_message($phone_number, $message_content){
-		$conn = sms_db_connect();
-		$sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('TRCKAP', '$phone_number', '$message_content')";
-		echo $sql;
-		mysqli_set_charset($conn, 'utf8mb4'); 
-		if(execute_query($sql, $conn)){
-			echo "SMS Sent";
-			header('location:../view/ ');
-		}else{
-			echo "not sent";
-		}
+		// // $conn = sms_db_connect();
+		// // $sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('TRCKAP', '$phone_number', '$message_content')";
+		// // echo $sql;
+		// // mysqli_set_charset($conn, 'utf8mb4'); 
+		// // if(execute_query($sql, $conn)){
+		// 	echo "SMS Sent";
+			header('location:../view/validation.php ');
+		// }else{
+		// 	echo "not sent";
+		// }
 	}
 	function verification_code(){
 		$string = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';

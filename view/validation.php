@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,9 +26,16 @@
     <div class="form">
     <form method="post">
     <div class="field-wrap">
+     <?php 
+        if(isset($_GET['type'])){
+          if($_GET['type'] == "login_error"){
+            echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Enter Valid Code</p>';
+         }
+       } 
+       ?><?php print_r($_SESSION['$key']);?>
     	<input type="text" name="otp" placeholder="enter the otp" class="form-control" required>
     	</div>
-    	<input type="submit" name="submit" value="continue" class="button button-block" formaction="add_vehicle.php">
+    	<input type="submit" name="submit" value="continue" class="button button-block" formaction="../controllers/verification_controllers.php">
     </form>
 </div>
     </div>

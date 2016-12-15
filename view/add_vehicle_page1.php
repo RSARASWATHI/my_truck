@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/sign_up.js"></script>
 </head>
 
 <body>
@@ -46,11 +47,22 @@
     
     <button class="btn btn-danger form-control" type="submit">Remove</button>
     </div> -->
-    <div class="text-center">
-        click start to enter the vehicle details
-        <button type="submit" class="btn btn-success" ><a href="add_vehicle_page1.php"> start</a></button>
-                        <!-- <button type="submit" class="button button-block" formaction="add_vehicle_page1.php">start</button> -->
-
+    <div class="container">
+        <div class="title">
+        <h1>vehicle details</h1>
+        </div>
+        <div class="input-field">
+        <div id="one">
+            <h4>enter vehicle no:</h4>
+            <input class="vehicle" type="text" name="vehicle_no">
+            </div>
+        </div>
+        <div class="input-field">
+        <div id="two">
+            <h4>enter vehicle no:</h4>
+            <input type="text" name="vehicle_no">
+            </div>
+        </div>
     </div>
 </body>
 
