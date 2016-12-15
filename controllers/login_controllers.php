@@ -3,6 +3,7 @@
 	include_once '../model/db.php';
 	include_once 'common_functions.php';
 	session_start();
+	$_SESSION['start'] = time();
 	$phone_number=$_POST['MobileNumber'];
 	get_user_number($phone_number);
 	
