@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -31,12 +35,10 @@
             echo '<p style="color: whitesmoke;text-align: center;font-family: monospace;">Enter Valid Code</p>';
          }
        } 
-       ?>
+       ?> <?php print_r($_SESSION['$key']);?>
     	<input type="text" name="otp" placeholder="enter the otp" class="form-control" required>
     	</div>
     	<input type="submit" name="submit" value="continue" class="button button-block" formaction="../controllers/verification_controllers.php">
     </form>
 </div>
     </div>
-</body>
-</html>

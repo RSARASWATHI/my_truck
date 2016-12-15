@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> LOGIN PAGE</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="logo">
-                    <img src="images/image1.jpg" alt="mytruck">
+                    <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                                 <br>
                             </div>
                         </div>
-                        <button type="submit" class="button button-block" formaction="controllers/login_controllers.php">login</button>
+                        <button type="submit" class="button button-block" formaction="../controllers/login_controllers.php">login</button>
                     </form>
                 </div>
                 <!-- login end -->
