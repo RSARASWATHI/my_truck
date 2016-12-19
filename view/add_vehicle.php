@@ -23,6 +23,10 @@ include_once '../controllers/common_functions.php';
                 <div class="logo">
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
+                    <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
+        <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
                 </div>
             </div>
         </div>
@@ -69,7 +73,7 @@ include_once '../controllers/common_functions.php';
       <h1>welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
        </h1>
        click start to enter the vehicle details
-        <button type="submit" class="btn btn-success" ><a href="add_vehicle_page1.php"> start</a></button>
+        <button type="submit" class="btn btn-success" ><a href="add_vehicle_page.php"> start</a></button>
     </div>
   </div>
 

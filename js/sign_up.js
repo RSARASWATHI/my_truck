@@ -1,3 +1,21 @@
+$(document).ready(function(){
+  
+  $(".input-field").css("opacity", "0.1");
+  $("#first").css("opacity", "1");
+  $(".input-field").click(function(){
+    $(this).css("opacity", "1");
+  
+  });
+    $(".input-field").keyup(function(){
+    $(this).css("opacity", "1");
+  });
+   $(".input-field").focus(function(){
+    $(this).css("opacity", "1");
+  });
+      $(".input-field").focusout(function(){
+    $(this).css("opacity", "0.1");
+  });
+  });
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
   var $this = $(this),
@@ -54,23 +72,23 @@ function isNumber(evt) {
     }
   }
 
-$(document).ready(function(){
+// $(document).ready(function(){
   
-  $(".input-field").css("opacity", "0.1");
-  $(".input-field").click(function(){
-    $(this).css("opacity", "1");
+//   $(".input-field").css("opacity", "0.1");
+//   $(".input-field").click(function(){
+//     $(this).css("opacity", "1");
   
-  });
-    $(".input-field").keyup(function(){
-    $(this).css("opacity", "1");
-  });
-   $(".input-field").focus(function(){
-    $(this).css("opacity", "1");
-  });
-      $(".input-field").focusout(function(){
-    $(this).css("opacity", "0.1");
-  });
-  });
+//   });
+//     $(".input-field").keyup(function(){
+//     $(this).css("opacity", "1");
+//   });
+//    $(".input-field").focus(function(){
+//     $(this).css("opacity", "1");
+//   });
+//       $(".input-field").focusout(function(){
+//     $(this).css("opacity", "0.1");
+//   });
+//   });
 
 
 $(function() {
