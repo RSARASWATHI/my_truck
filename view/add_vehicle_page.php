@@ -29,7 +29,8 @@
         </div>    
     </nav>
         <div class="container">
-            <h1>vehicle details</h1> 
+            <h1>vehicle details </h1> 
+            <h3>press enter to go next</h3>
             <form method="post">  
                 <div class="input-field">
                     <div class="question">
