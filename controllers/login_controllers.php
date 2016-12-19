@@ -2,12 +2,10 @@
 	include_once'../model/curd_operations.php';
 	include_once '../model/db.php';
 	include_once 'common_functions.php';
-	session_start();
 	$_SESSION['start'] = time();
 	$phone_number=$_POST['MobileNumber'];
 	$_SESSION['phoneno']=$phone_number;
 	get_user_number($phone_number);
-	// create_session($phone_number);
 	function get_user_number($phone_number){
 		$con=db_connect();
 		$condition=" `phonenumber` = '".$phone_number."'";
