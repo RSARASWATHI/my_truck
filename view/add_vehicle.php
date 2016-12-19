@@ -29,8 +29,7 @@ include_once '../controllers/common_functions.php';
     </nav>
     <div class="col-sm-3 col-lg-2">
       <nav class="navbar navbar-default navbar-fixed-side">
-<<<<<<< HEAD
-        <ul class="nav sidebar-nav">
+      <!--   <ul class="nav sidebar-nav">
             <li class="sidebar-brand">
                 <a href="add_vehicle_page.php">Vehicle Details</a>
             </li>
@@ -41,8 +40,7 @@ include_once '../controllers/common_functions.php';
       <div class="col-sm-9 col-lg-10">
         <h1>welcome vefetch</h1>
           click start to enter the vehicle details
-        <button type="submit" class="btn btn-success" action="add_vehicle_page.php" ><a href="add_vehicle_page.php"> Add Vehicle</a></button>
-=======
+        <button type="submit" class="btn btn-success" action="add_vehicle_page.php" ><a href="add_vehicle_page.php"> Add Vehicle</a></button> -->
       <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
                        <h1 text-align:center;> Vehicle <h1>
@@ -63,7 +61,6 @@ include_once '../controllers/common_functions.php';
 
                ?>
             </ul>
-        <!-- normal collapsible navbar markup -->
       </nav>
     </div>
     <div class="text-center">
@@ -73,7 +70,6 @@ include_once '../controllers/common_functions.php';
        </h1>
        click start to enter the vehicle details
         <button type="submit" class="btn btn-success" ><a href="add_vehicle_page1.php"> start</a></button>
->>>>>>> 3d5baad4e722e60261bb857421ccb50ff3a11025
     </div>
   </div>
 

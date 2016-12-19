@@ -26,7 +26,7 @@
             <div class="center1">
                 <ul class="tab-group">
                     <li class="tab active"><a href="#login">login</a></li>
-                    <li class="tab"><a href="index.php">Sign up</a></li>
+                    <li class="tab"><a href="home.php">Sign up</a></li>
                 </ul>
                  <?php 
         if(isset($_GET['type'])){
@@ -41,14 +41,9 @@
                             <div class="input-group">
                                 <span class="input-group-addon">+91</span>
 
-<<<<<<< HEAD
-                                <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required autofocus>
+                                <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="MobileNumber" placeholder="Mobile Number" maxlength="10" required autofocus>
                                <br>
-=======
-                                <input type="text" class="form-control" name="MobileNumber" placeholder="Mobile Number" maxlength="10" required>
-                            
                                 <br>
->>>>>>> 3d5baad4e722e60261bb857421ccb50ff3a11025
                             </div>
                         </div>
                         <button type="submit" class="button button-block" formaction="../controllers/login_controllers.php">login</button>

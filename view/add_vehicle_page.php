@@ -10,7 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/sign_up.js"></script>
-    <script src="../js/jquery-2.2.3.min.js"></script>  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="../js/jquery-2.2.3.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -74,8 +75,8 @@
                     </div>
                     <input class="cls" id="tb8" type="text" name="total_due" placeholder="Enter Total Due For this Truck" required><br><br>
                 </div>
-                <button style="width=150px; height=40px" class="btn btn-success" type="submit">submit</button>
-                <!-- <button style="width=150px;height=40px; float=left" class="btn btn-danger " type="submit">Remove</button> --><br><br><br>
+                <button style="width=150px; height=50px" class="btn btn-success" type="submit">submit</button>
+                <br><br><br>
             </form>
     </div>
 </body>
