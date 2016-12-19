@@ -17,6 +17,10 @@
                 <div class="logo">
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
+                    <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
+       <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+     </ul>
                 </div>
             </div>
         </div>
@@ -45,7 +49,6 @@
                                 <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="MobileNumber" placeholder="Mobile Number" maxlength="10" required autofocus>
                                <br>
                                 <br>
-
                             </div>
                         </div>
                         <button type="submit" class="button button-block" formaction="../controllers/login_controllers.php">login</button>

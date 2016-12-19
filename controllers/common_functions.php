@@ -32,7 +32,7 @@
 		$con=db_connect();
 		$condition=" `phonenumber` = '".$phonenumber."'";
 		$selected_row = select('id', 'users',$condition, $con);
-		return $selected_row['0']['id'];
+		return $selected_row[0]['id'];
 	}
 	function get_user_name($phonenumber){
 		$con=db_connect();
@@ -48,4 +48,8 @@
   $selected_row=select('vehicle_no','vehicle_detail',$condition,$con);
   return $selected_row;
 
+}
+function log_out(){
+	session_destroy();
+	header('Location:../index.php');
 }
