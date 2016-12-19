@@ -194,7 +194,7 @@ textarea {
 .container{
   margin-top:158px;
 }
-span{
+.logo span{
 font-size: 24px;
 color:#ffffff;
 
@@ -239,10 +239,17 @@ color:#ffffff;
 {
   position: center;}
 
-.blue{
-  color: red;
+
+/*.inputfield{
+  font-color:lightgrey;
+  font-size: 20px;
+  opacity:0.5;
 
 }
-.important{
-  color:lightgrey;
+.inputfield:focus{
+  font-color:black;
+  font-size:30px;
+  border-color: green;
+  opacity: 1;
 }
+*/

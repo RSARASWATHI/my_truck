@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/sign_up.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -40,9 +41,8 @@
                             <div class="input-group">
                                 <span class="input-group-addon">+91</span>
 
-                                <input type="text" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required>
-                            
-                                <br>
+                                <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required autofocus>
+                               <br>
                             </div>
                         </div>
                         <button type="submit" class="button button-block" formaction="../controllers/login_controllers.php">login</button>

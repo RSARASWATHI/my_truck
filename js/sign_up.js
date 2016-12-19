@@ -27,6 +27,7 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
 });
 
+
 $('.tab a').on('click', function (e) {
   
   e.preventDefault();
@@ -52,3 +53,36 @@ function isNumber(evt) {
     if (theEvent.preventDefault) theEvent.preventDefault();
     }
   }
+
+$(document).ready(function(){
+  
+  $(".input-field").css("opacity", "0.1");
+  $(".input-field").click(function(){
+    $(this).css("opacity", "1");
+  
+  });
+    $(".input-field").keyup(function(){
+    $(this).css("opacity", "1");
+  });
+   $(".input-field").focus(function(){
+    $(this).css("opacity", "1");
+  });
+      $(".input-field").focusout(function(){
+    $(this).css("opacity", "0.1");
+  });
+  });
+
+
+$(function() {
+
+            $('input:text:first').focus();
+            var $inp = $('.cls');
+            $inp.bind('keydown', function(e) {
+                var key = e.which;
+                if (key == 13) {
+                    e.preventDefault();
+                    var nxtIdx = $inp.index(this) + 1;
+                    $(".cls:eq(" + nxtIdx + ")").focus();
+                }
+            });
+        });
