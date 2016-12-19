@@ -1,6 +1,10 @@
+<?php 
+include_once'../model/curd_operations.php';
+include_once '../model/db.php';
+include_once '../controllers/common_functions.php';
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>otp verification</title>
     <meta charset="utf-8">
@@ -18,9 +22,6 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-            <!-- <div class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span>sign out</a>
-        </div>  -->                                     
                 <div class="logo">
                     <img src="../images/image1.jpg" alt="mytruck">
 
@@ -39,13 +40,23 @@
       <nav class="navbar navbar-default navbar-fixed-side">
       <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="add_vehicle_page.php">
-                        <!-- <button type="submit" class="button button-block" formaction="add_vehicle_page.php">add vehicle</button> -->
-                        
-                       Add Vehicle
-                    </a>
-
+                       <h1 text-align:center;> Vehicle <h1>
                 </li>
+                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                if(is_array($vehicle_no)){
+                  $total_html="";
+                  foreach ($vehicle_no as $value) {
+                    $total_html = $total_html."<form method='post'>
+                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
+                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
+                  }
+                  echo "$total_html";
+                }
+                else
+                  echo "<h3>Add Vehicle by Start Button</h3>";
+                
+
+               ?>
             </ul>
         <!-- normal collapsible navbar markup -->
       </nav>
@@ -53,11 +64,14 @@
     <div class="text-center">
     <div class="col-sm-9 col-lg-10">
       <!-- your page content -->
-      <h1>welcome vefetch</h1>
+      <h1>welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
+       </h1>
+       click start to enter the vehicle details
+        <button type="submit" class="btn btn-success" ><a href="add_vehicle_page1.php"> start</a></button>
     </div>
   </div>
   </div>
 </div>
 </body>
-
 </html>
+

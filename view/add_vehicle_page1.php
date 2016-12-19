@@ -1,3 +1,8 @@
+<?php 
+include_once'../model/curd_operations.php';
+include_once '../model/db.php';
+include_once '../controllers/common_functions.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -25,9 +30,11 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="container">
+    <div class="container">
     <h1>vehicle details</h1>
-        <input class="form-control" type="text" name="vehicle_no" placeholder="Enter Vehicle Number" required>
+     <input type="hidden"  class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno'])?>>
+     <br>
+    <input class="form-control" type="text" name="vehicle_no" placeholder="Enter Vehicle Number" required>
     <br>
     <input class="form-control" type="date" name="vehicle_RC_date" placeholder="Enter Vehicle RC Date" required>
     <br>
@@ -42,28 +49,12 @@
     <input class="form-control" type="text" name="due_time_interval" placeholder="Enter Due Time Interval" required>
     <br>
     <input class="form-control" type="text" name="total_due" placeholder="Enter Total Due For this Truck" required>
-    <br>
-    <button class="btn btn-success form-control" type="submit">submit</button>
     
-    <button class="btn btn-danger form-control" type="submit">Remove</button>
-    </div> -->
-    <div class="container">
-        <div class="title">
-        <h1>vehicle details</h1>
-        </div>
-        <div class="input-field">
-        <div id="one">
-            <h4>enter vehicle no:</h4>
-            <input class="vehicle" type="text" name="vehicle_no">
-            </div>
-        </div>
-        <div class="input-field">
-        <div id="two">
-            <h4>enter vehicle no:</h4>
-            <input type="text" name="vehicle_no">
-            </div>
-        </div>
+    <button class="btn btn-success form-control" type="submit" formaction="../controllers/add_vehicle_controllers.php">submit</button>
+    
+    <button class="btn btn-danger form-control" >Remove</button>
     </div>
+  
 </body>
 
 </html>

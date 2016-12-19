@@ -5,8 +5,9 @@
 	session_start();
 	$_SESSION['start'] = time();
 	$phone_number=$_POST['MobileNumber'];
+	$_SESSION['phoneno']=$phone_number;
 	get_user_number($phone_number);
-	
+	// create_session($phone_number);
 	function get_user_number($phone_number){
 		$con=db_connect();
 		$condition=" `phonenumber` = '".$phone_number."'";
@@ -17,7 +18,7 @@
 			$_SESSION['$key']=$key;
 			send_message($phone_number,$key);
 		}else{
-				header('Location: ../login.php?type=login_error');
+				header('Location: ../view/login.php?type=login_error');
 			
 		}
 	}

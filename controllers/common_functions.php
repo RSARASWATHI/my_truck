@@ -1,19 +1,12 @@
 <?php
 	include_once'../model/db.php';
+	session_start();
 	function send_message($phone_number, $message_content){
-<<<<<<< HEAD
-		// // $conn = sms_db_connect();
-		// // $sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('TRCKAP', '$phone_number', '$message_content')";
-		// // echo $sql;
-		// // mysqli_set_charset($conn, 'utf8mb4'); 
-		// // if(execute_query($sql, $conn)){
-=======
 		// $conn = sms_db_connect();
 		// $sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('TRCKAP', '$phone_number', '$message_content')";
 		// echo $sql;
 		// mysqli_set_charset($conn, 'utf8mb4'); 
 		// if(execute_query($sql, $conn)){
->>>>>>> b93f34f95caa397bdede4654c196dbe155b67a0e
 		// 	echo "SMS Sent";
 			header('location:../view/validation.php ');
 		// }else{
@@ -37,14 +30,22 @@
 
 	function get_user_id($phonenumber){
 		$con=db_connect();
-		$condition=" `phonenumber` = '".$phone_number."'";
+		$condition=" `phonenumber` = '".$phonenumber."'";
 		$selected_row = select('id', 'users',$condition, $con);
-		return $selected_row;
+		return $selected_row['0']['id'];
 	}
 	function get_user_name($phonenumber){
 		$con=db_connect();
-		$condition=" `phonenumber` = '".$phone_number."'";
+		$condition=" `phonenumber` = '".$phonenumber."'";
 		$selected_row = select('name', 'users',$condition, $con);
-		return $selected_row;
+		return $selected_row[0]['name'];
 	
 	}
+	function get_vehicle_name($phoneno){
+  $con=db_connect();
+  $id=get_user_id($phoneno);
+  $condition=" `user_id` = '".$id."'";
+  $selected_row=select('vehicle_no','vehicle_detail',$condition,$con);
+  return $selected_row;
+
+}

@@ -40,7 +40,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon">+91</span>
 
-                                <input type="text" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required>
+                                <input type="text" class="form-control" name="MobileNumber" placeholder="Mobile Number" maxlength="10" required>
                             
                                 <br>
                             </div>
