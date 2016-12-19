@@ -26,17 +26,42 @@ include_once '../controllers/common_functions.php';
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
-        <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
       </ul>
+     </ul>
                 </div>
             </div>
         </div>    
     </nav>
+     <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side">
+      <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                       <h1  style="text-align:center;"> Vehicle <h1>
+                </li>
+                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                if(is_array($vehicle_no)){
+                  $total_html="";
+                  foreach ($vehicle_no as $value) {
+                    $total_html = $total_html."<form method='post'>
+                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
+                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
+                  }
+                  echo "$total_html";
+                }
+                else
+                  echo "<h3>Add Vehicle by Start Button</h3>";
+                
+
+               ?>
+            </ul>
+      </nav>
+    </div>
         <div class="container">
-            <h1>vehicle details </h1> 
-            <p>press enter to go next</p>
             <form method="post"> 
+            <div class="input-field">
+            <h1 style="text-align:left;">vehicle details</h1>
+            <p>press enter to go to the next</p>
+            <br><br> 
             <input type="hidden" class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno']) ;?> required>
                 <div class="input-field">
                     <div class="question">

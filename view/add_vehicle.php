@@ -34,7 +34,7 @@ include_once '../controllers/common_functions.php';
     <div class="col-sm-3 col-lg-2">
       <nav class="navbar navbar-default navbar-fixed-side">
       <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
+                <li class="sidebar-brand" id="leftmenuinnerinner">
                        <h1  style="text-align:center;"> Vehicle <h1>
                 </li>
                 <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);

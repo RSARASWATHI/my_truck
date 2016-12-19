@@ -32,7 +32,10 @@ $(document).ready(function(){
       $(".input-field").focusout(function(){
     $(this).css("opacity", "0.1");
   });
+<<<<<<< HEAD
   });
+=======
+>>>>>>> 89a3f6a4d8fa58846f70a371de709eef7b318b67
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
   var $this = $(this),

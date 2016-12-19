@@ -208,19 +208,19 @@ color:#ffffff;
   position: fixed;
   border-radius: 0;
   height: 100%;
-}*/
+}
 .text-center{
   margin-top: 200px;
-}
-/*.navbar-fixed-left {
-  width: 140px;
+}*/
+.navbar-fixed-left {
+  width: 150px;
   position: fixed;
   border-radius: 0;
   height: 100%;
 }
 
 .navbar-fixed-left .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
+  float: none;   Cancel default li float: left 
   width: 139px;
 }
 
@@ -228,11 +228,6 @@ color:#ffffff;
   padding-left: 160px;
 }
 
-/* On using dropdown menu (To right shift popuped) */
-.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
-  margin-top: -50px;
-  margin-left: 140px;
-}
 .sidebar-wrapper{
   height: 100%;
 }
@@ -253,7 +248,14 @@ color:#ffffff;
   border-color: green;
   opacity: 1;
 }
-*/
+
 /*.glyphicon glyphicon-user:focus{
   color:#ffffff;
 }*/
+#leftmenuinnerinner {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
