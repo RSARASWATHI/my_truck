@@ -24,30 +24,24 @@ include_once '../controllers/common_functions.php';
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
+<<<<<<< HEAD
+       <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+     </ul>
+=======
         <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
         <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
       </ul>
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 </div>
             </div>
         </div>
     </nav>
     <div class="col-sm-3 col-lg-2">
       <nav class="navbar navbar-default navbar-fixed-side">
-      <!--   <ul class="nav sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="add_vehicle_page.php">Vehicle Details</a>
-            </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="text-center">
-      <div class="col-sm-9 col-lg-10">
-        <h1>welcome vefetch</h1>
-          click start to enter the vehicle details
-        <button type="submit" class="btn btn-success" action="add_vehicle_page.php" ><a href="add_vehicle_page.php"> Add Vehicle</a></button> -->
       <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
-                       <h1 text-align:center;> Vehicle <h1>
+                       <h1  style="text-align:center;"> Vehicle <h1>
                 </li>
                 <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
                 if(is_array($vehicle_no)){
@@ -70,16 +64,17 @@ include_once '../controllers/common_functions.php';
     <div class="text-center">
     <div class="col-sm-9 col-lg-10">
       <!-- your page content -->
-      <h1>welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
+      <h1 style="text-align:center">welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
        </h1>
+<<<<<<< HEAD
+       <p style="text-align:center">click start to enter the vehicle details
+        <button type="submit" class="btn btn-success"  ><a href="add_vehicle_page.php"> Add Vehicle</a></button></p>
+=======
        click start to enter the vehicle details
         <button type="submit" class="btn btn-success" ><a href="add_vehicle_page.php"> start</a></button>
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
     </div>
   </div>
-
-  </div>
-
-</div>
 </body>
 </html>
 

@@ -26,21 +26,64 @@ function get_vehicle_detail($_name){
     <link href="css/navbar-fixed-side.css" rel="stylesheet" />
 </head>
 <body>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="logo">
+                    <img src="../images/image1.jpg" alt="mytruck">
+                    <span>my truck</span>
+                    <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
+       <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
+       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+     </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side">
+      <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                       <h1  style="text-align:center;"> Vehicle <h1>
+                </li>
+                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                if(is_array($vehicle_no)){
+                  $total_html="";
+                  foreach ($vehicle_no as $value) {
+                    $total_html = $total_html."<form method='post'>
+                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
+                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
+                  }
+                  echo "$total_html";
+                }
+                else
+                  echo "<h3>Add Vehicle by Start Button</h3>";
+                
 
-<div class="container">
-<div class="container-fluid">
-<form method="post" action="../controllers/update_controllers.php">
+               ?>
+            </ul>
+      </nav>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+	<div class="container">
+	<div class="container-fluid">
+	<form method="post" action="../controllers/update_controllers.php">
+	<h1 style="text-align:left;">Vehicle Detail</h1>
 	<table>
 	<tbody>
-
-	<input type="hidden" class="form-control" name="id" value=<?php echo $detail[0]['id'] ;?> required	>
-	<br>
+		<input type="hidden" class="form-control" name="id" value=<?php echo $detail[0]['id'] ;?> required>
+		<br>
 	<tr>
-	<td>
-	<label>Vehicle Number </label>&nbsp;</td>
-	<td><label>
-	<input type="text" class="form-control" name="Vehicle Number" value=<?php echo $detail[0]['vehicle_no'] ;?> disabled></label><br>
-	<br></td>
+		<td>
+			<label>Vehicle Number </label>&nbsp;</td>
+		<td>
+			<label>
+				<input type="text" class="form-control" name="Vehicle Number" value=<?php echo $detail[0]['vehicle_no'] ;?> disabled>
+			</label>
+			<br>
+			<br>	
+		</td>
 	</tr>
 	<tr><td>
 	<label>RC date</label>&nbsp;</td><td><label>

@@ -7,7 +7,6 @@
 	$phone_number=$_POST['MobileNumber'];
 	$_SESSION['phoneno']=$phone_number;
 	get_user_number($phone_number);
-	// create_session($phone_number);
 	function get_user_number($phone_number){
 		$con=db_connect();
 		$condition=" `phonenumber` = '".$phone_number."'";

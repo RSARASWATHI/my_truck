@@ -1,4 +1,23 @@
 $(document).ready(function(){
+<<<<<<< HEAD
+ $(".input-field").css("opacity", "0.1");
+ $("#first").css("opacity","1");
+ $(".input-field").click(function(){
+   $(this).css("opacity", "1");
+ });
+   $(".input-field").keyup(function(){
+   $(this).css("opacity", "1");
+ });
+  $(".input-field").focus(function(){
+   $(this).css("opacity", "1");
+ });
+     $(".input-field").focusout(function(){
+   $(this).css("opacity", "0.1");
+ });
+});
+
+
+=======
   
   $(".input-field").css("opacity", "0.1");
   $("#first").css("opacity", "1");
@@ -16,6 +35,7 @@ $(document).ready(function(){
     $(this).css("opacity", "0.1");
   });
   });
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
   var $this = $(this),
@@ -61,17 +81,34 @@ $('.tab a').on('click', function (e) {
   
 });
 
-function isNumber(evt) {
-    var theEvent = evt || window.event;
-    var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode(key);
-    var regex = /^[0-9,]+$/;
-    if (!regex.test(key)) {
-      theEvent.returnValue = false;
-    if (theEvent.preventDefault) theEvent.preventDefault();
-    }
-  }
 
+function isNumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode(key);
+   var regex = /^[0-9,]+$/;
+   if (!regex.test(key)) {
+     theEvent.returnValue = false;
+   if (theEvent.preventDefault) theEvent.preventDefault();
+   }
+ }
+
+<<<<<<< HEAD
+
+
+$(function() {
+           $('input:text:first').focus();
+           var $inp = $('.cls');
+           $inp.bind('keydown', function(e) {
+               var key = e.which;
+               if (key == 13) {
+                   e.preventDefault();
+                   var nxtIdx = $inp.index(this) + 1;
+                   $(".cls:eq(" + nxtIdx + ")").focus();
+               }
+           });
+       });
+=======
 // $(document).ready(function(){
   
 //   $(".input-field").css("opacity", "0.1");
@@ -104,3 +141,4 @@ $(function() {
                 }
             });
         });
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
