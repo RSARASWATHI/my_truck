@@ -24,15 +24,10 @@ include_once '../controllers/common_functions.php';
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
-<<<<<<< HEAD
        <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
      </ul>
-=======
-        <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-      </ul>
->>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
+        
                 </div>
             </div>
         </div>
@@ -66,13 +61,9 @@ include_once '../controllers/common_functions.php';
       <!-- your page content -->
       <h1 style="text-align:center">welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
        </h1>
-<<<<<<< HEAD
        <p style="text-align:center">click start to enter the vehicle details
         <button type="submit" class="btn btn-success"  ><a href="add_vehicle_page.php"> Add Vehicle</a></button></p>
-=======
-       click start to enter the vehicle details
-        <button type="submit" class="btn btn-success" ><a href="add_vehicle_page.php"> start</a></button>
->>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
+       
     </div>
   </div>
 </body>

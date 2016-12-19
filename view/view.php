@@ -35,7 +35,6 @@ function get_vehicle_detail($_name){
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
        <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
      </ul>
                 </div>
             </div>
@@ -51,9 +50,9 @@ function get_vehicle_detail($_name){
                 if(is_array($vehicle_no)){
                   $total_html="";
                   foreach ($vehicle_no as $value) {
-                    $total_html = $total_html."<form method='post'>
-                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
-                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
+	                    $total_html = $total_html."<form method='post'>
+		                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
+		                  	<li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
                   }
                   echo "$total_html";
                 }
