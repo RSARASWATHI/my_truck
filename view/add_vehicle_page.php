@@ -6,80 +6,43 @@ include_once '../controllers/common_functions.php';
 <!DOCTYPE html>
 <html>
 <head>
-   <title>otp verification</title>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title> LOGIN PAGE</title>
-   <link rel="stylesheet" type="text/css" href="../css/style.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="../js/sign_up.js"></script>   
+    <title>otp verification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LOGIN PAGE</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/sign_up.js"></script>
+    <script src="../js/jquery-2.2.3.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="logo">
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
-<<<<<<< HEAD
-       <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-     </ul>
-=======
         <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
         <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
       </ul>
->>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 </div>
             </div>
-        </div>
+        </div>    
     </nav>
-    <div class="col-sm-3 col-lg-2">
-      <nav class="navbar navbar-default navbar-fixed-side">
-      <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
-                       <h1 text-align:center;> Vehicle <h1>
-                </li>
-                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
-                if(is_array($vehicle_no)){
-                  $total_html="";
-                  foreach ($vehicle_no as $value) {
-                    $total_html = $total_html."<form method='post'>
-                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
-                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
-                  }
-                  echo "$total_html";
-                }
-                else
-                  echo "<h3>Add Vehicle by Start Button</h3>";
-                
-
-               ?>
-            </ul>
-      </nav>
-    </div>
-    <div class="col-sm-9 col-lg-10">
         <div class="container">
-<<<<<<< HEAD
             <h1>vehicle details </h1> 
-            <h3>press enter to go next</h3>
-            <form method="post">  
-                <div class="input-field">
-=======
-            <h1 style="text-align:left;">vehicle details</h1>
-            <br><br> 
+            <p>press enter to go next</p>
             <form method="post"> 
             <input type="hidden" class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno']) ;?> required>
-        <br> 
-                <div class="input-field" id="first">
->>>>>>> ee7e0874d5faff3f7c273900e5a99d45654eeecd
+                <div class="input-field">
                     <div class="question">
                     <h4>1.Enter Vehicle Number</h4><br>
                     </div>
-                    <input class="cls" id="tb1" type="text" name="vehicle_no" placeholder="Enter Vehicle Number" required autofocus><br><br>
+                    <input class="cls" id="tb1" type="text" name="vehicle_no" placeholder="Enter Vehicle Number" required><br><br>
                 </div>
                 <div class="input-field">
                     <div class="question">
@@ -123,11 +86,7 @@ include_once '../controllers/common_functions.php';
                     </div>
                     <input class="cls" id="tb8" type="text" name="total_due" placeholder="Enter Total Due For this Truck" required><br><br>
                 </div>
-<<<<<<< HEAD
-                <button style="width=150px; height=50px" class="btn btn-success" type="submit" formaction="../controllers/add_vehicle_controllers.php">submit</button>
-=======
                 <button style="width=150px; height=50px" class="btn btn-success" type="submit" formaction="add_vehicle.php">submit</button>
->>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 <br><br><br>
             </form>
     </div>

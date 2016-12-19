@@ -18,15 +18,8 @@
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
-<<<<<<< HEAD
        <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-       <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
      </ul>
-=======
-        <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
-      </ul>
->>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 </div>
             </div>
         </div>
