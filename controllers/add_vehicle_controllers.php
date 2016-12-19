@@ -2,10 +2,12 @@
 	include_once'../model/curd_operations.php';
 	include_once '../model/db.php';
 	include_once 'common_functions.php';
-	add_vehicle_detail($_POST);
-	
-	function add_vehicle_detail($_POST){
+	$data=$_POST;
+	add_vehicle_detail($data);
+	// print_r($data);
+	function add_vehicle_detail($_get){
 		$con=db_connect();
-		insert('vehicle_detail',array('	vehicle_no', 'Insurance_date', 'Due_date', 'Due_amount', 'Reminder_before', 'Due_interval', 'Total_dues','user_id'),array($_POST['vehicle_no'],$_POST['Insurance_date'], $_POST['Due_date'],$_POST['Due_amount'],$_POST['Reminder_before'],$_POST['Due_interval'],$_POST['Total_dues'],$_POST['user_id']),$con);
+		insert('vehicle_detail',array('vehicle_no','RC_date' ,'Insurance_date', 'Due_date', 'Due_amount', 'Reminder_before', 'Due_interval', 'Total_dues','user_id'),array($_get['vehicle_no'],$_get['vehicle_RC_date'],$_get['insurance_date'], $_get['loan_due_date'],$_get['loan_due_amount'],$_get['reminder_before'],$_get['due_time_interval'],$_get['total_due'],$_get['id']),$con);
+		header('Location:../view/add_vehicle.php');
 	}
 			

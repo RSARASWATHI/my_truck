@@ -48,7 +48,7 @@
                        <div class="field-wrap">
                            <div class="input-group">
                                <span class="input-group-addon">+91</span>
-                               <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="Mobile Number" placeholder="Mobile Number" maxlength="10" required autofocus>
+                               <input  type="text" onkeypress="return isNumber(event)" class="form-control" name="mobile_number" placeholder="mobile_number" maxlength="10" required autofocus>
                                <br>
                            </div>
                        </div>
