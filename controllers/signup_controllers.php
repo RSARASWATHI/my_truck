@@ -17,7 +17,11 @@
 		}else{
 			insert('users',array('name','phonenumber'),array($name,$phone_number),$con);
 			 $key=verification_code();
+<<<<<<< HEAD
 			// echo $key; 
+=======
+			echo $key;
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
 			 $_SESSION['$key']=$key;
 			send_message($phone_number,$key);
 			

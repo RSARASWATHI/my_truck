@@ -24,9 +24,15 @@ include_once '../controllers/common_functions.php';
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
                     <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
+<<<<<<< HEAD
        <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
      </ul>
+=======
+        <a href="sign_out.php" style="color:#ffffff"><span class="glyphicon glyphicon-user" ></span> Log Out</a>
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 </div>
             </div>
         </div>
@@ -110,7 +116,11 @@ include_once '../controllers/common_functions.php';
                     </div>
                     <input class="cls" id="tb8" type="text" name="total_due" placeholder="Enter Total Due For this Truck" required><br><br>
                 </div>
+<<<<<<< HEAD
                 <button style="width=150px; height=50px" class="btn btn-success" type="submit" formaction="../controllers/add_vehicle_controllers.php">submit</button>
+=======
+                <button style="width=150px; height=50px" class="btn btn-success" type="submit" formaction="add_vehicle.php">submit</button>
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
                 <br><br><br>
             </form>
     </div>

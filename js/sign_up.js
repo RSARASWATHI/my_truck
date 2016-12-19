@@ -1,4 +1,5 @@
 $(document).ready(function(){
+<<<<<<< HEAD
  $(".input-field").css("opacity", "0.1");
  $("#first").css("opacity","1");
  $(".input-field").click(function(){
@@ -16,6 +17,25 @@ $(document).ready(function(){
 });
 
 
+=======
+  
+  $(".input-field").css("opacity", "0.1");
+  $("#first").css("opacity", "1");
+  $(".input-field").click(function(){
+    $(this).css("opacity", "1");
+  
+  });
+    $(".input-field").keyup(function(){
+    $(this).css("opacity", "1");
+  });
+   $(".input-field").focus(function(){
+    $(this).css("opacity", "1");
+  });
+      $(".input-field").focusout(function(){
+    $(this).css("opacity", "0.1");
+  });
+  });
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
   
   var $this = $(this),
@@ -73,6 +93,7 @@ function isNumber(evt) {
    }
  }
 
+<<<<<<< HEAD
 
 
 $(function() {
@@ -87,3 +108,37 @@ $(function() {
                }
            });
        });
+=======
+// $(document).ready(function(){
+  
+//   $(".input-field").css("opacity", "0.1");
+//   $(".input-field").click(function(){
+//     $(this).css("opacity", "1");
+  
+//   });
+//     $(".input-field").keyup(function(){
+//     $(this).css("opacity", "1");
+//   });
+//    $(".input-field").focus(function(){
+//     $(this).css("opacity", "1");
+//   });
+//       $(".input-field").focusout(function(){
+//     $(this).css("opacity", "0.1");
+//   });
+//   });
+
+
+$(function() {
+
+            $('input:text:first').focus();
+            var $inp = $('.cls');
+            $inp.bind('keydown', function(e) {
+                var key = e.which;
+                if (key == 13) {
+                    e.preventDefault();
+                    var nxtIdx = $inp.index(this) + 1;
+                    $(".cls:eq(" + nxtIdx + ")").focus();
+                }
+            });
+        });
+>>>>>>> eeee021e594926f27a6ca658cc1e371c49ec183e
