@@ -18,9 +18,6 @@ landing_page_session_check();
                 <div class="logo">
                     <img src="../images/image1.jpg" alt="mytruck">
                     <span>my truck</span>
-                    <ul class="nav navbar-nav navbar-right"  style="margin-right:30px; margin-top:40px;">
-       <a href="sign_out.php" style="color:#ffffff "><span class="glyphicon glyphicon-user" ></span> Log Out</a>
-     </ul>
                 </div>
             </div>
         </div>
