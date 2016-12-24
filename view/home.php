@@ -1,4 +1,7 @@
-<html>
+<?php
+include_once '../controllers/common_functions.php';
+landing_page_session_check();
+?><html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

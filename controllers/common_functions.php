@@ -1,13 +1,15 @@
 <?php
 	include_once'../model/db.php';
 	session_start();
-	function send_message($phone_number, $message_content){
-		// $conn = sms_db_connect();
+	function send_message($phone_number, $key){
+		$conn = sms_db_connect();
+		$message_content="MY TRUCK APP Code is '".$key."'";
+		// echo $message_content;
 		// $sql = "INSERT INTO `MessageOut` (`MessageFrom`, `MessageTo` , `MessageText`) VALUES ('TRCKAP', '$phone_number', '$message_content')";
-		// echo $sql;
+		// // echo $sql;
 		// mysqli_set_charset($conn, 'utf8mb4'); 
 		// if(execute_query($sql, $conn)){
-		// 	echo "SMS Sent";
+		// 	// echo "SMS Sent";
 			header('location:../view/validation.php ');
 		// }else{
 		// 	echo "not sent";
@@ -53,3 +55,25 @@ function log_out(){
 	session_destroy();
 	header('Location:../index.php');
 }
+
+	function landing_page_session_check(){
+		if(!isset($_SESSION["user_details"]) || empty($_SESSION["user_details"])){
+			header('location:login.php');
+		}
+	}
+
+	function login_page_session_check(){
+		if(isset($_SESSION["user_details"])){
+			header('location:view.php');
+		}
+	}
+	function create_session($data){
+		session_start();
+		$user_details = $data['0'];
+		$_SESSION["user_details"] = $user_details;
+		$_SESSION['check_value'] = 1;
+		if(isset($_SESSION['user_details'])){
+			return true;
+		}
+		return false;
+	}

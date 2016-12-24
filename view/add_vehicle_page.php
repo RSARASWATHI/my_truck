@@ -56,19 +56,14 @@ include_once '../controllers/common_functions.php';
     </div>
     <div class="col-sm-9 col-lg-10">
         <div class="container">
-<<<<<<< HEAD
-            <h1>vehicle details </h1> 
-            <h3>press enter to go next</h3>
             <form method="post">  
                 <div class="input-field">
-=======
             <h1 style="text-align:left;">vehicle details</h1>
             <p>press enter to go to the next</p>
             <br><br> 
             <input type="hidden" class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno']) ;?> required>
         <br> 
                 <div class="input-field" id="first">
->>>>>>> ee7e0874d5faff3f7c273900e5a99d45654eeecd
                     <div class="question">
                     <h4>1.Enter Vehicle Number</h4><br>
                     </div>
