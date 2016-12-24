@@ -54,62 +54,6 @@ include_once '../controllers/common_functions.php';
             </ul>
         </nav>
     </div>
-<<<<<<< HEAD
-    <div class="col-sm-9 col-lg-10">
-        <div class="container">
-            <form method="post">  
-                <div class="input-field">
-            <h1 style="text-align:left;">vehicle details</h1>
-            <p>press enter to go to the next</p>
-            <br><br> 
-            <input type="hidden" class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno']) ;?> required>
-        <br> 
-                <div class="input-field" id="first">
-                    <div class="question">
-                    <h4>1.Enter Vehicle Number</h4><br>
-                    </div>
-                    <input class="cls" id="tb1" type="text" name="vehicle_no" placeholder="Enter Vehicle Number" required autofocus><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>2.Enter Vehicle RC Date</h4><br>
-                    </div>
-                    <input class="cls" id="tb2" type="date" name="vehicle_RC_date" placeholder="Enter Vehicle RC Date" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>3.Enter Insurance Date</h4><br>
-                    </div>
-                    <input class="cls" id="tb3" type="date" name="insurance_date" placeholder="Enter Vehicle Insurance Date" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>4.Enter Loan Due Date</h4><br>
-                    </div>
-                    <input class="cls" id="tb4" type="date" name="loan_due_date" v  placeholder="Enter Loan Due Date" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>5.Enter Loan Due Amount</h4><br>
-                    </div>
-                    <input class="cls" id="tb5" type="text" name="loan_due_amount" placeholder="Enter Loan Due Amount" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>6.Enter Reminder Date</h4><br>
-                    </div>
-                    <input class="cls" id="tb6" type="text" name="reminder_before" placeholder="Enter Reminder Date" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>7.Enter Due Time Interval</h4><br>
-                    </div>
-                    <input class="cls" id="tb7" type="text" name="due_time_interval" placeholder="Enter Due Time Interval" required><br><br>
-                </div>
-                <div class="input-field">
-                    <div class="question">
-                    <h4>8. Enter Total Due For This Truck</h4><br>
-=======
     <div id="page-content-wrapper">
             <div class="content-header">
                 <h1 id="home">
@@ -123,7 +67,6 @@ include_once '../controllers/common_functions.php';
                 <div class="row">
                     <div class="jumbotron">
                         <h2 style="text-align:center">Enter the vehicle details by pressing enter</h2>
->>>>>>> a3e72a10584baf45f277470249424ea1715a7355
                     </div>
                 <div class="container">
                     <form method="post"> 

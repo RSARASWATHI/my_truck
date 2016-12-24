@@ -23,8 +23,8 @@ include_once '../controllers/common_functions.php';
   <div class="container-fluid">
     <div class="navbar-header">
     <div class="logo">
-                    <img src="../images/image1.jpg" alt="mytruck">
-                    <span>my truck</span>
+                <img src="../images/image1.jpg" alt="mytruck">
+                <span>my truck</span>
       </div>
     </div>
     <ul class="nav navbar-nav navbar-right">
