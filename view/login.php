@@ -36,7 +36,7 @@
        } 
        ?>
                 <div id="login">
-                    <form action="/" method="post">
+                    <form action="../controllers/login_controllers.php" method="post">
                         <div class="field-wrap">
                             <div class="input-group">
                                 <span class="input-group-addon">+91</span>
@@ -45,7 +45,7 @@
                                 <br>
                             </div>
                         </div>
-                        <button type="submit" class="button button-block" formaction="../controllers/login_controllers.php">login</button>
+                        <button type="submit" class="button button-block" >login</button>
                     </form>
                 </div>
                 <!-- login end -->

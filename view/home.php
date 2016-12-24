@@ -1,6 +1,5 @@
 <?php
 include_once '../controllers/common_functions.php';
-landing_page_session_check();
 ?><html>
 <head>
     <meta charset="utf-8">

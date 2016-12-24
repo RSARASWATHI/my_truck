@@ -2,6 +2,7 @@
 include_once'../model/curd_operations.php';
 include_once '../model/db.php';
 include_once '../controllers/common_functions.php';
+// landing_page_session_check();
 $detail=get_vehicle_detail($_POST);
 function get_vehicle_detail($_name){
 	$con=db_connect();
@@ -64,7 +65,7 @@ function get_vehicle_detail($_name){
                     foreach ($vehicle_no as $value) {
                     $total_html = $total_html.
                     "<form method='post'>
-                        <input type='hidden' name='id' value='".$value['vehicle_no']."'>
+                        <input type='hidden' name='id' value='".$value['vehicle_no']."'><br>
                         <li><button formaction='view.php' style='width:200px' text-align:'center'; >".$value['vehicle_no']."</button></li>
                     </form>";
                     }

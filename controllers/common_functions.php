@@ -58,7 +58,7 @@ function log_out(){
 
 	function landing_page_session_check(){
 		if(!isset($_SESSION["user_details"]) || empty($_SESSION["user_details"])){
-			header('location:login.php');
+			header('location:../index.php');
 		}
 	}
 

@@ -1,4 +1,4 @@
-<?php
+ <?php
  session_start();
  $_SESSION['timenow']=time();
  $time=$_SESSION['timenow']-$_SESSION['start'];

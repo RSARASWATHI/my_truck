@@ -4,8 +4,8 @@
 	include_once 'common_functions.php';
 	$_SESSION['start'] = time();
 	$con=db_connect();
-	$name=$_POST['Name'];
-	$phone_number=$_POST['mobile_number'];
+	$name=$_REQUEST['Name'];
+	$phone_number=$_REQUEST['mobile_number'];
 	$_SESSION['phoneno']=$phone_number;
 	user_details($name,$phone_number,$con);
 	// create_session($phone_number);

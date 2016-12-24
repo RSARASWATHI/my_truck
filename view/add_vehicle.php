@@ -47,8 +47,8 @@ include_once '../controllers/common_functions.php';
                   $total_html="";
                   foreach ($vehicle_no as $value) {
                     $total_html = $total_html."<form method='post'>
-                    <input type='hidden' name='id' value='".$value['vehicle_no']."'>
-                  <li><button formaction='view.php' style='width:245px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
+                    <input type='hidden' name='id' value='".$value['vehicle_no']."'><br>
+                  <li><button formaction='view.php' style='width:200px' text-align:'center'; >".$value['vehicle_no']."</button></li></form>";
                   }
                   echo "$total_html";
                 }

@@ -4,7 +4,7 @@
 	include_once 'common_functions.php';
 	// session_start();
 	$_SESSION['start'] = time();
-	$phone_number=$_POST['MobileNumber'];
+	$phone_number=$_REQUEST['MobileNumber'];
 	$_SESSION['phoneno']=$phone_number;
 	get_user_number($phone_number);
 	function get_user_number($phone_number){
