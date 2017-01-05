@@ -28,59 +28,31 @@
 			    exit();
 			}
 			return $connection;
-		}
-
-	function get_user_id($phonenumber){
-		$con=db_connect();
-		$condition=" `phonenumber` = '".$phonenumber."'";
-		$selected_row = select('id', 'users',$condition, $con);
-		return $selected_row[0]['id'];
-	}
-	function get_user_name($phonenumber){
-		$con=db_connect();
-		$condition=" `phonenumber` = '".$phonenumber."'";
-		$selected_row = select('name', 'users',$condition, $con);
-		return $selected_row[0]['name'];
-	
 	}
 	function get_vehicle_name($phoneno){
-  $con=db_connect();
-  $id=get_user_id($phoneno);
-  $condition=" `user_id` = '".$id."'";
-  $selected_row=select('vehicle_no','vehicle_detail',$condition,$con);
-  return $selected_row;
+			$con=db_connect();
+			$id=$_SESSION['user_details']['id'];
+			$condition=" `user_id` = '".$id."'";
+			$selected_row=select('vehicle_no','vehicle_detail',$condition,$con);
+			return $selected_row;
 
-}
-function log_out(){
-	session_destroy();
-	header('Location:../index.php');
-}
-
-	function landing_page_session_check(){
-		if(!isset($_SESSION["user_details"]) || empty($_SESSION["user_details"])){
-			header('location:../index.php');
-		}
 	}
-
-	function login_page_session_check(){
-		if(isset($_SESSION["user_details"])){
-			header('location:view.php');
-		}
-	}
-	function create_session($data){
-		// session_start();
-		$user_details = $data['0'];
-		// print_r($user_details);
-		$_SESSION["user_details"] = $user_details;
-		// $_SESSION['check_value'] = 1;
-		if(isset($_SESSION['user_details'])){
-			return true;
-		}
-		return false;
-
+	function log_out(){
+			session_destroy();
+			header('Location:../index.php');
 	}
 	function get_user_detail($phone_number,$con){
-		$condition=" `phonenumber` = '".$phone_number."'";
-		$selected_row = select('*', 'users',$condition, $con);
-		return $selected_row;
+			$condition=" `phonenumber` = '".$phone_number."'";
+			$selected_row = select('*', 'users',$condition, $con);
+			return $selected_row;
+	}
+	function create_session($data){
+			$user_details= $data['0'];
+			$_SESSION["user_details"] = $user_details;
+			$_SESSION['check_value'] = 1;
+			if(isset($_SESSION['user_details'])){
+				return true;
+			}
+			return false;
+
 	}

@@ -38,7 +38,7 @@ include_once '../controllers/common_functions.php';
                 <li class="sidebar-brand">
                     <a href="#home"><span class="fa fa-home solo">Vehicle List</span></a>
                 </li>
-                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                <?php $vehicle_no=get_vehicle_name($_SESSION['user_details']['phonenumber']);
                     if(is_array($vehicle_no)){
                     $total_html="";
                     foreach ($vehicle_no as $value) {
@@ -73,7 +73,7 @@ include_once '../controllers/common_functions.php';
                 <div class="container">
                     <form method="post"> 
                         <div class="jumbotron">
-                            <input type="hidden" class="form-control" name="id" value=<?php echo get_user_id($_SESSION['phoneno']) ;?> required>
+                            <input type="hidden" class="form-control" name="id" value=<?php echo $_SESSION['user_details']['id'];?> required>
                                 <div class="input-field">
                                     <div class="question">
                                         <h4>1.Enter Vehicle Number</h4><br>

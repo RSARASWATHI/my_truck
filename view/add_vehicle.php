@@ -42,7 +42,7 @@ include_once '../controllers/common_functions.php';
                     <li class="sidebar-brand">
                         <a href="#home"><span class="fa fa-home solo">Vehicle List</span></a>
                     </li>
-                    <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                    <?php $vehicle_no=get_vehicle_name($_SESSION['user_details']['phonenumber']);
                 if(is_array($vehicle_no)){
                   $total_html="";
                   foreach ($vehicle_no as $value) {
@@ -69,7 +69,7 @@ include_once '../controllers/common_functions.php';
             <div class="page-content inset" data-spy="scroll" data-target="#spy">
                 <div class="row">
                         <div class="jumbotron">
-                  <h1 style="text-align:center">welcome <?php echo get_user_name($_SESSION['phoneno']); ?></h1>
+                  <h1 style="text-align:center">welcome <?php echo $_SESSION['user_details']['name'] ?></h1>
        <p style="text-align:center">click start to enter the vehicle details
         <button type="submit" class="btn btn-success" ><a href="add_vehicle_page.php" style="color:black;"> Add Vehicle</a></button></p>
             <!-- </div> -->
