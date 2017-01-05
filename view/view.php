@@ -2,7 +2,6 @@
 include_once'../model/curd_operations.php';
 include_once '../model/db.php';
 include_once '../controllers/common_functions.php';
-// landing_page_session_check();
 $detail=get_vehicle_detail($_POST);
 function get_vehicle_detail($_name){
 	$con=db_connect();
@@ -11,7 +10,6 @@ function get_vehicle_detail($_name){
 	$selected_row=select('*','vehicle_detail',$condition,$con);
 	return $selected_row;
 }
-// print_r($detail);
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,7 +57,7 @@ function get_vehicle_detail($_name){
                 <li class="sidebar-brand">
                     <a href="#home"><span class="fa fa-home solo">Vehicle List</span></a>
                 </li>
-                <?php $vehicle_no=get_vehicle_name($_SESSION['phoneno']);
+                <?php $vehicle_no=get_vehicle_name($_SESSION['user_details']['phonenumber']);
                     if(is_array($vehicle_no)){
                     $total_html="";
                     foreach ($vehicle_no as $value) {
