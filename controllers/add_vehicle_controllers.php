@@ -2,7 +2,7 @@
 	include_once'../model/curd_operations.php';
 	include_once '../model/db.php';
 	include_once 'common_functions.php';
-	$data=$_POST;
+	$data=$_REQUEST;
 	add_vehicle_detail($data);
 	// due_message_date($data);
 	function add_vehicle_detail($_get){
